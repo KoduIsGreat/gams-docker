@@ -23,11 +23,11 @@ Assuming the folder structure
             - Documents  <- current directory
 ```
 
-A) clone the repository `git clone https://repoenv.rti.org/scm/watermd/gams-docker.git`
+**I.** clone the repository `git clone https://repoenv.rti.org/scm/watermd/gams-docker.git`
 
-B) cd into cloned directory `cd  gams-docker`
+**II.** cd into cloned directory `cd  gams-docker`
 
-C) Extract model input / files to a `sourceandstudies` directory located in the repository you just cloned. 
+**III.** Extract model input / files to a `sourceandstudies` directory located in the repository you just cloned. 
 
 ```
  - C:\ 
@@ -38,10 +38,10 @@ C) Extract model input / files to a `sourceandstudies` directory located in the 
            - sourceandstudies <- extract here
 ```
 
-D) run `docker-compose up`, this will start the container and listen on tty for input 
+**IV.** run `docker-compose up`, this will start the container and listen on tty for input 
 you should see something like what is below. Alternatively if you add the `-d` flag to this command it 
 will allow you to run the container in the background while keeping it open so you dont have to run
-step E in a different terminal.
+step **V.** in a different terminal.
 
 ``` 
 adamshelton@RTI-102350 MINGW64 /c/Repositories/gams (master)
@@ -51,8 +51,8 @@ Attaching to gams_gams_1
 
 ```
 
-E) now run `docker exec -ti rti-gams-25.0.3 bash`(in a different terminal if you did not do `-d`) this will launch the bash shell inside the running container
+**V.** now run `docker exec -ti rti-gams-25.0.3 bash`(in a different terminal if you did not do `-d`) this will launch the bash shell inside the running container
 inside the working directory of the container which is /workspace, if you run `ls` you will notice all the contents of 
 sourceandstudies have been copied to this directory.
 
-F) you can now invoke gams as you would normally if you were not in a container
+**VI.** you can now invoke gams as you would normally if you were not in a container
